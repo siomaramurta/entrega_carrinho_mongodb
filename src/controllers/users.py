@@ -15,7 +15,7 @@ async def users_crud():
     users_collection = db.users_collection
 
     user =  {
-        "email": "lu_domagalu@gmail.com",
+        "email": "ludomagalu@gmail.com",
         "password": "213sd312re3",
         "is_active": True,
         "is_admin": False
@@ -69,6 +69,20 @@ async def users_crud():
 
         print(result)
     elif option == '5':
+        # delete
+        user = await get_user(
+            users_collection,
+            user["_id"]
+        )
+
+        result = await delete_user(
+            users_collection,
+            user["_id"]
+        )
+
+        print(result)
+    
+    elif option == '6':
         # pagination
         users = await get_users(
             users_collection,
