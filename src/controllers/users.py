@@ -3,6 +3,7 @@ from src.models.user import (
     get_user_by_email,
     update_user,
     delete_user,
+    get_user,
     get_users
 )
 from src.server.database import connect_db, db, disconnect_db

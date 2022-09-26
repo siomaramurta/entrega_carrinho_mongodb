@@ -1,15 +1,17 @@
 Projeto carrinho de compras - Módulo Banco de Dados - MongoDB
+
 A partir do projeto modelo shopping-cart do repositório, que tem como finalidade fazer
 os CRUD’s da api por meio da conexão com o mongodb.
+
 Atividade
 Nesta etapa, nosso projeto deverá fazer algumas operações CRUD à partir da conexão do
 mongodb pelo python, conforme a descrição abaixo:
 
 ● Cadastrar um usuário com um nome e um e-mail. Um usuário irá ter um
-código identificador único no sistema. - OK
-● Consultar um usuário pelo seu código identificador. - OK
-● Remover um usuário pelo código dele. -OK
-● Cadastrar o(s) endereço(s) do usuário. - OK
+código identificador único no sistema.
+● Consultar um usuário pelo seu código identificador.
+● Remover um usuário pelo código dele.
+● Cadastrar o(s) endereço(s) do usuário.
 ● Pesquisar pelos endereços de um usuário.
 ● Remover um endereço do usuário pelo seu código identificador.
 ● Cadastrar um produto, que possua nome, descrição, preço, e código
@@ -18,9 +20,11 @@ identificador.
 ● Criar um carrinho de compras associado a um usuário.
 ● Adicionar produtos ao carrinho de compras.
 ● Remover produtos ao carrinho de compras.
-● Calcular o valor total do carrinho.
+● Calcular o valor total do carrinho. 
 ● Remover o carrinho de compras.
+
 Sobre o trabalho
+
 ● O trabalho deverá ser entregue até o dia 25/09/2022 às 23:59:59, horário de
 Brasília.
 ● O trabalho é individual.
@@ -28,6 +32,7 @@ Brasília.
 professores e os parças que irão corrigi-lo.
 ○ Mais detalhes sobre isto, serão repassados posteriormente.
 ● Serão avaliados:
+
 ○ Legibilidade do código fonte. O quanto o seu código fonte é claro efácil
 de entender? Isto envolve variáveis, funções e classes que você
 adicionar ou modificar. O seu código segue uma lógica ou linha de

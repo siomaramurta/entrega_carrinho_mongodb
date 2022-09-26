@@ -1,6 +1,11 @@
+from src.server.database import db
+
 from src.models.address import (
-    create_address
+    create_address,
+    get_addresses,
+    delete_address
 )
+
 from src.server.database import connect_db, db, disconnect_db
 
 async def address_crud():
@@ -19,13 +24,13 @@ async def address_crud():
 },
        "address": [
            {
-        "street": "Rua III, 342",
-        "cep": "31800555",
-        "district": "Ponta Negra",
-        "city": "Belo Horizonte",
-        "state": "Minas Gerais",
-        "is_delivery": True
-    }
+            "street": "Rua III, 342",
+            "cep": "31800555",
+            "district": "Ponta Negra",
+            "city": "Belo Horizonte",
+            "state": "Minas Gerais",
+            "is_delivery": True
+            }
        ]
     }
 
@@ -39,9 +44,22 @@ async def address_crud():
 
     elif option == '8':
         # get addresses
-        user = await get_user_by_email(
-            users_collection,
-            user["email"]
-    
+        address = await get_addresses(
+            address_collection,
+            id
+        )
+        
+    elif option == '9':
+        # delete
+        address = await delete_address(
+            address_collection,
+            id
+        )
+
+        result = await delete_address(
+            address_collection,
+            id
+        )
+        print(result)    
         
     await disconnect_db()
